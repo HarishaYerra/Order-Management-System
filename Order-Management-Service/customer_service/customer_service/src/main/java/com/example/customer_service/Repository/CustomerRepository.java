@@ -13,7 +13,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Long>{
 	Optional<Customer> findByAccountNumber(String accountNumber);
 	
 	//Find customer using account number
-	Optional<Customer> findByAccountId(String accountId);
+	Optional<Customer> findByAccountId(Long long1);
 	
 	//Find customer using email
 	Optional<Customer> findByEmail(String email);
