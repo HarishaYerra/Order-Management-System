@@ -28,10 +28,10 @@ public class CustomerService {
 	     // Validation
 	     validation.validateSearchRequest(request);
 		//Search using account number
-		if(request.getAccountNumber()!= null &&
-				!request.getAccountNumber().isBlank()) {
+		if(request.getCustomerNumber()!= null &&
+				!request.getCustomerNumber().isBlank()) {
 			return customerRepository
-					.findByAccountNumber(request.getAccountNumber())
+					.findByCustomerNumber(request.getCustomerNumber())
 					.orElseThrow(()->
 						new CustomerNotFoundException("Customer not found"));
 		}

@@ -13,8 +13,8 @@ public class Validation {
     public void validateSearchRequest(CustomerSearchRequest request) {
 
         boolean isAccountNumberEmpty =
-                request.getAccountNumber() == null ||
-                request.getAccountNumber().isBlank();
+                request.getCustomerNumber() == null ||
+                request.getCustomerNumber().isBlank();
 
         boolean isEmailEmpty =
                 request.getEmail() == null ||
@@ -29,3 +29,4 @@ public class Validation {
             );
         }
     }
+}

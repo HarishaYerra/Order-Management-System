@@ -10,7 +10,7 @@ import com.example.customer_service.Entity.Customer;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long>{
 	//Find customer using account id
-	Optional<Customer> findByAccountNumber(String accountNumber);
+	Optional<Customer> findByCustomerNumber(String accountNumber);
 	
 	//Find customer using account number
 	Optional<Customer> findByAccountId(Long long1);

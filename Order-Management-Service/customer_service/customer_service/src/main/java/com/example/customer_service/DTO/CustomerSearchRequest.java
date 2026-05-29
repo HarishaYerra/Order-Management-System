@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class CustomerSearchRequest {
-	String accountNumber;
+	String customerNumber;
     Long accountId;
     String email;
 }
