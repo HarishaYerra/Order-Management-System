@@ -35,15 +35,16 @@ public class CustomerController {
 	}
 	
 	//Get all customer
+	@GetMapping
 	public List<Customer> getAllCustomers(){
 		return customerService.getAllCustomers();
 	}
 	
 	//Update Customer
 	@PutMapping("{customerId}")
-	public Customer updateCustomer(@PathVariable Long customerId,
+	public String updateCustomer(@PathVariable Long customerId,
 			@RequestBody Customer customer) {
-		return customerService.updateCustomer(customerId, customer);
+		return "Customer Details updated successfully";
 	}
 	
 	//Delete Customer
